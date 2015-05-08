@@ -9,6 +9,11 @@ class ArticlesController < ApplicationController
 	end
 
 	def new
+		@article = Article.new
+	end
+
+	def edit
+		@article = Article.find(params[:id])
 	end
 
 	def create
@@ -18,10 +23,17 @@ class ArticlesController < ApplicationController
 			redirect_to @article
 		else
 			render 'new'
+		end
 	end
 
-	private
-		def article_params
-			params.require(:article).permit(:title, :text)
-		end
+	def destory
+		@article = Article.find(params[:id])
+		@article.destroy
+
+		redirect_to articles_path
+
+	def article_params
+		params.require(:article).permit(:title, :text)
+	end
+
 end
