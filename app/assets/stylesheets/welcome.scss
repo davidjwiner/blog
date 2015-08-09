@@ -7,19 +7,34 @@ h1 {
 }
 
 body {
-	padding-top: 80px;
-	padding-bottom: 40px;
+	text-align: center;
+	background: aliceblue;
+}
+
+.container-vertical {
+	padding-top: 200px;
+	padding-bottom: 200px;
 }
 
 .container-narrow {
-	padding-top: 80px;
-	margin: 0 auto;
-	max-width: 750px;
+	margin: 30px 30px;
+	// height: 100%;
+	// position: relative;
+	max-width: 400px;
+	border: black;
+	border-width: 30px;	
+	display: inline-block;
+	text-align: left;
+	vertical-align: middle;
+
+	&.text-container {
+
+	}
 }
 
 .lead {
-	margin-bottom: 20px;
-	font-size: 21px;
+	margin-bottom: 10px;
+	font-size: 18px;
 	font-weight: 200;
 	line-height: 30px;
 }
